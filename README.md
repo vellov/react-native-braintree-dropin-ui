@@ -1,4 +1,4 @@
-# react-native-braintree-dropin-ui
+# canhtran10/react-native-braintree-dropin-ui
 
 > React Native integration of Braintree Drop-in for IOS & ANDROID (Apple Pay, Google Pay, Paypal, Venmo, Credit Card)
 
@@ -13,7 +13,7 @@ For React Native versions >= 0.60
 
 IOS
 ```bash
-npm install react-native-braintree-dropin-ui --save
+npm install canhtran10/react-native-braintree-dropin-ui --save
 
 cd ./ios
 pod install
@@ -21,7 +21,28 @@ pod install
 
 Android
 ```bash
-npm install react-native-braintree-dropin-ui --save
+npm install canhtran10/react-native-braintree-dropin-ui --save
+```
+
+```
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.cruisemap" #### xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    ......
+
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:allowBackup="false"
+      android:requestLegacyExternalStorage="true"
+      android:theme="@style/AppTheme"
+      #### tools:replace="android:allowBackup"
+    >
+      <activity
+      ..........
 ```
 
 ## Configurate Payment Method(For ALL RN VERSIONS)
@@ -33,7 +54,7 @@ For React Native versions < 0.60
 ### Mostly automatic installation
 
 ```bash
-react-native link react-native-braintree-dropin-ui
+react-native link canhtran10/react-native-braintree-dropin-ui
 ```
 
 #### iOS specific

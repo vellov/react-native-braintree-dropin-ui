@@ -24,9 +24,12 @@ Android
 npm install canhtran10/react-native-braintree-dropin-ui --save
 ```
 
+### Add your AndroidManifest.xml:
+### - xmlns:tools="http://schemas.android.com/tools"
+### - tools:replace="android:allowBackup"
 ```
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.cruisemap" **xmlns:tools="http://schemas.android.com/tools"**>
+  package="com.cruisemap" xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     ......
@@ -39,7 +42,7 @@ npm install canhtran10/react-native-braintree-dropin-ui --save
       android:allowBackup="false"
       android:requestLegacyExternalStorage="true"
       android:theme="@style/AppTheme"
-      **tools:replace="android:allowBackup**"
+      tools:replace="android:allowBackup"
     >
       <activity
       ..........
